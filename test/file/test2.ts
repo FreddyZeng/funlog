@@ -10,10 +10,14 @@ name: string;
 
 constructor() {
   console.log("path: /home/fanrong/funlog/test/file/test2.ts, line: 11, column: 14");
+  console.log("path: /home/fanrong/funlog/test/file/test2.ts, line: 11, column: 14");
+  console.log("path: /home/fanrong/funlog/test/file/test2.ts, line: 11, column: 14");
 }
 
 
 getName(name: string) {
+  console.log("path: /home/fanrong/funlog/test/file/test2.ts, line: 17, column: 22");
+  console.log("path: /home/fanrong/funlog/test/file/test2.ts, line: 16, column: 22");
   console.log("path: /home/fanrong/funlog/test/file/test2.ts, line: 16, column: 22");
 
   return this.name;
@@ -22,6 +26,8 @@ getName(name: string) {
 
 // this is exported and is publicly available for creating Cats
 export function createCat(): Cat {
+  console.log("path: /home/fanrong/funlog/test/file/test2.ts, line: 26, column: 33");
+  console.log("path: /home/fanrong/funlog/test/file/test2.ts, line: 24, column: 33");
   console.log("path: /home/fanrong/funlog/test/file/test2.ts, line: 23, column: 33");
 
   return new CatImpl();

@@ -1,0 +1,8 @@
+.test .a {
+	padding: 40px;
+	.bad {
+		bottom: 4px;
+        content:'file: /home/fanrong/funlog/test/file/test.css, line: 5';
+	}
+    content:'file: /home/fanrong/funlog/test/file/test.css, line: 6';
+}

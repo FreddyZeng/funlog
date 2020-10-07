@@ -7,6 +7,8 @@
         name: 'foo',
         created () {
             console.log("path: /home/fanrong/funlog/test/file/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/file/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/file/foo.vue, line: 8, column: 19");
         }
     };
 </script>
