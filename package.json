@@ -1,0 +1,40 @@
+{
+  "name": "funlog",
+  "description": "Insert console.log to the top of function",
+  "version": "0.0.1",
+  "author": "freddyzeng @FreddyZeng",
+  "bin": {
+    "funlog": "./bin/run"
+  },
+  "bugs": "https://github.com/freddyzeng/funlog/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/freddyzeng/funlog",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "funlog"
+  },
+  "repository": "freddyzeng/funlog",
+  "scripts": {
+    "prepack": "oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
