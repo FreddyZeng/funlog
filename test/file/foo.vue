@@ -19,5 +19,6 @@
  padding: 2px;
     content:'file: /home/fanrong/funlog/test/file/foo.vue, line: 20';
     content:'file: /home/fanrong/funlog/test/file/foo.vue, line: 21';
+    content:'file: /home/fanrong/funlog/test/file/foo.vue, line: 22';
 }
 </style>

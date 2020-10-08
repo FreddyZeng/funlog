@@ -15,6 +15,7 @@ class FunlogCommand extends Command {
 
   handleCSSForFile(file) {
     const ext = path.extname(file);
+    console.log(file);
     if (ext == '.css' ||
       ext == '.less' ||
       ext == '.sass' ||
@@ -65,7 +66,6 @@ class FunlogCommand extends Command {
           const line_number = parseInt(i) + 1;
           if (/ *\}$/.test(line)) {
             const space = ' ';
-            console.log(line.length);
             read_file_line_array[i] = `${space.repeat((line.length-1)*4 + 4)}content:'file: ${file}, line: ${line_number}';\n${line}`
             // console.log(read_file_line_array[i]);
           }
@@ -129,10 +129,10 @@ class FunlogCommand extends Command {
           // If the `nonull` option is set, and nothing
           // was found, then files is ["**/*.js"]
           // er is an error object or null.
-          console.log(files);
+          // console.log(files);
           files.forEach((file, i) => {
             file = absolute_file_path + '/' + file;
-            console.log(file);
+            // console.log(file);
             this.handleCSSForFile(file);
           });
         });
@@ -149,8 +149,9 @@ class FunlogCommand extends Command {
           // was found, then files is ["**/*.js"]
           // er is an error object or null.
 
-          console.log(files);
+          // console.log(files);
           files.forEach((file, i) => {
+            // console.log(file);
             this.handleFunctionForFile(file)
           });
         });
