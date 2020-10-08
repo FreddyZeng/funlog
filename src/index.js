@@ -17,8 +17,9 @@ const {
 class FunlogCommand extends Command {
 
   handleCSSForFile(file) {
-    const ext = path.extname(file);
+    const ext = path.extname(file).toLowerCase();
     console.log(file);
+    let space_alignment_count = 4;
     if (ext == '.css' ||
       ext == '.less' ||
       ext == '.sass' ||
@@ -33,10 +34,13 @@ class FunlogCommand extends Command {
         for (const i in read_file_line_array) {
           const line = read_file_line_array[i];
           const line_number = parseInt(i) + 1;
-          if (/ *\}$/.test(line)) {
+          if (/ *\} */.test(line)) {
             const space = ' ';
             // console.log(line.length);
-            read_file_line_array[i] = `${space.repeat((line.length-1)*4 + 4)}content:'file: ${file}, line: ${line_number}';\n${line}`
+            if (ext != '.css') {
+              space_alignment_count = 1;
+            }
+            read_file_line_array[i] = `${space.repeat(line.length-1 + space_alignment_count)}content:'file: ${file}, line: ${line_number}';\n${line}`
             // console.log(read_file_line_array[i]);
           }
         }
@@ -74,9 +78,9 @@ class FunlogCommand extends Command {
             continue;
           }
           const line_number = parseInt(i) + 1;
-          if (/ *\}$/.test(line)) {
+          if (/ *\} */.test(line)) {
             const space = ' ';
-            read_file_line_array[i] = `${space.repeat((line.length-1)*4 + 4)}content:'file: ${file}, line: ${line_number}';\n${line}`
+            read_file_line_array[i] = `${space.repeat(line.length-2 + space_alignment_count)}content:'file: ${file}, line: ${line_number}';\n${line}`
             // console.log(read_file_line_array[i]);
           }
         }
@@ -90,14 +94,14 @@ class FunlogCommand extends Command {
           }
         });
       });
-    }else {
+    } else {
       console.log(color.red(`css-fail:\ncan not find the path:\n${file}`));
     }
   }
 
   handleFunctionForFile(file) {
     // console.log(file);
-    const ext = path.extname(file);
+    const ext = path.extname(file).toLowerCase();
     let parser_type = 'flow';
     if (ext == '.js') {
       parser_type = 'babel'
@@ -118,8 +122,7 @@ class FunlogCommand extends Command {
         return;
       }
 
-      if (/1 *ok/.test(stdout)) {
-      } else {
+      if (/1 *ok/.test(stdout)) {} else {
         console.log(color.red(`function-fail: ${file}`));
       }
     });

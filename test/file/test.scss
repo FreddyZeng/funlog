@@ -1,0 +1,21 @@
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    content:'file: /home/fanrong/funlog/test/file/test.scss, line: 6';
+  }
+
+  li {
+    display: inline-block;
+    content:'file: /home/fanrong/funlog/test/file/test.scss, line: 10';
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    content:'file: /home/fanrong/funlog/test/file/test.scss, line: 16';
+  }
+  content:'file: /home/fanrong/funlog/test/file/test.scss, line: 17';
+}
