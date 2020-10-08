@@ -2,7 +2,10 @@ const {
   Command,
   flags
 } = require('@oclif/command')
-const compiler = require('vue-template-compiler');
+const {
+  color
+} = require('@oclif/color')
+// const compiler = require('vue-template-compiler');
 const glob = require("glob");
 const path = require('path')
 const fs = require('fs');
@@ -22,7 +25,10 @@ class FunlogCommand extends Command {
       ext == '.scss'
     ) {
       fs.readFile(file, (err, data) => {
-        if (err) throw err;
+        if (err) {
+          console.log(color.red(`css-fail: ${file}`));
+          throw err;
+        }
         const read_file_line_array = data.toString().split("\n");
         for (const i in read_file_line_array) {
           const line = read_file_line_array[i];
@@ -39,13 +45,17 @@ class FunlogCommand extends Command {
           flag: 'r+'
         }, (err) => {
           if (err) {
+            console.log(color.red(`css-fail: ${file}`));
             throw err;
           }
         });
       });
     } else if (ext == '.vue') {
       fs.readFile(file, (err, data) => {
-        if (err) throw err;
+        if (err) {
+          console.log(color.red(`css-fail: ${file}`));
+          throw err;
+        }
         const read_file_line_array = data.toString().split("\n");
         // console.log(read_file_line_array);
         let enterStyleArea = false;
@@ -75,16 +85,18 @@ class FunlogCommand extends Command {
           flag: 'r+'
         }, (err) => {
           if (err) {
+            console.log(color.red(`css-fail: ${file}`));
             throw err;
           }
         });
       });
+    }else {
+      console.log(color.red(`css-fail:\ncan not find the path:\n${file}`));
     }
   }
 
   handleFunctionForFile(file) {
-    file = absolute_file_path + '/' + file;
-    console.log(file);
+    // console.log(file);
     const ext = path.extname(file);
     let parser_type = 'flow';
     if (ext == '.js') {
@@ -92,20 +104,24 @@ class FunlogCommand extends Command {
     } else if (ext == '.ts') {
       parser_type = 'ts'
     }
-
-    exec(`jscodeshift -t ${root}/src/t.js --parser=${parser_type} ${file}`, (error, stdout, stderr) => {
+    const root_path = this.config.root;
+    exec(`jscodeshift -t ${root_path}/src/t.js --parser=${parser_type} ${file}`, (error, stdout, stderr) => {
       if (error) {
         console.log(`error: ${error.message}`);
+        console.log(color.red(`function-fail: ${file}`));
         return;
       }
 
       if (stderr) {
         console.log(`stderr: ${stderr}`);
+        console.log(color.red(`function-fail: ${file}`));
         return;
       }
 
-      console.log(`stdout: ${stdout}`);
-
+      if (/1 *ok/.test(stdout)) {
+      } else {
+        console.log(color.red(`function-fail: ${file}`));
+      }
     });
   }
 
@@ -115,8 +131,7 @@ class FunlogCommand extends Command {
     } = this.parse(FunlogCommand)
     const absolute_file_path = path.resolve(flags.path || '')
     const onlyHandleCss = flags.css
-    const root = this.config.root;
-    console.log(absolute_file_path);
+    // console.log(absolute_file_path);
 
     const incomePathExt = path.extname(absolute_file_path);
 
@@ -151,7 +166,8 @@ class FunlogCommand extends Command {
 
           // console.log(files);
           files.forEach((file, i) => {
-            // console.log(file);
+            file = absolute_file_path + '/' + file;
+            console.log(file);
             this.handleFunctionForFile(file)
           });
         });

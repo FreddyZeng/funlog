@@ -9,6 +9,16 @@
             console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
             console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
             console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
+            console.log("path: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 8, column: 19");
         }
     };
 </script>
@@ -22,5 +32,9 @@
     content:'file: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 22';
     content:'file: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 23';
     content:'file: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 24';
+    content:'file: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 25';
+    content:'file: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 26';
+    content:'file: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 27';
+    content:'file: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 38';
 }
 </style>
