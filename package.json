@@ -1,6 +1,6 @@
 {
   "name": "funlog",
-  "description": "Insert console.log to the top of function",
+  "description": "A tool for insert log to function of js and ts and vue，insert log to content of css and less and sass",
   "version": "0.0.1",
   "author": "freddyzeng @FreddyZeng",
   "bin": {
@@ -27,7 +27,11 @@
   ],
   "homepage": "https://github.com/freddyzeng/funlog",
   "keywords": [
-    "oclif"
+    "debug",
+    "console",
+    "log",
+    "function",
+    "babel-plugin"
   ],
   "license": "MIT",
   "main": "src/index.js",
