@@ -17,5 +17,6 @@
     /* Won't be extracted */
 .a {
  padding: 2px;
+    content:'file: /home/fanrong/funlog/test/fileorigin/foo.vue, line: 20';
 }
 </style>

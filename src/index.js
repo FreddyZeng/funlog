@@ -44,7 +44,7 @@ class FunlogCommand extends Command {
               const read_file_line_array = data.toString().split("\n");
               for (i in read_file_line_array) {
                 const line = read_file_line_array[i];
-                const line_number = parseInt(i)+1;
+                const line_number = parseInt(i) + 1;
                 if (/ *\}$/.test(line)) {
                   const space = ' ';
                   console.log(line.length);
@@ -61,11 +61,42 @@ class FunlogCommand extends Command {
                 }
               });
             });
-          } else {
-            // const read_file_array = fs.readFileSync(file).toString().split("\n");
-            // for (i in read_file_array) {
-            //   console.log(read_file_array[i]);
-            // }
+          } else if (ext == '.vue') {
+            fs.readFile(file, function (err, data) {
+              if (err) throw err;
+              const read_file_line_array = data.toString().split("\n");
+              let enterStyleArea = false;
+              for (i in read_file_line_array) {
+                const line = read_file_line_array[i];
+                if (/^ *< *style\b/.test(line)) {
+                  enterStyleArea = true;
+                  // console.log('enterStyleArea = true');
+                  continue;
+                }else if (/^ *<\/ *style\b/.test(line)) {
+                  enterStyleArea = false;
+                  // console.log('enterStyleArea = false');
+                  continue;
+                }
+                if (!enterStyleArea) {
+                  continue;
+                }
+                const line_number = parseInt(i) + 1;
+                if (/ *\}$/.test(line)) {
+                  const space = ' ';
+                  console.log(line.length);
+                  read_file_line_array[i] = `${space.repeat((line.length-1)*4 + 4)}content:'file: ${file}, line: ${line_number}';\n${line}`
+                  // console.log(read_file_line_array[i]);
+                }
+              }
+              const write_data = read_file_line_array.join("\n");
+              fs.writeFile(file, write_data, {
+                flag: 'r+'
+              }, (err) => {
+                if (err) {
+                  throw err;
+                }
+              });
+            });
           }
         });
       });
