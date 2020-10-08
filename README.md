@@ -10,7 +10,7 @@ A tool for insert log to function of js and ts and vue，insert log to content o
 <!-- tocstop -->
 # Install
 ```sh-session
-$ npm install -g funlog
+$ npm install -g @freddyzeng/funlog
 ```
 # Usage
 <!-- usage -->
@@ -26,4 +26,8 @@ USAGE
 <!-- usagestop -->
 
 # Example
-  TODO
+  need todo
+
+# TODO
+  - handle element of HTML
+  - more config

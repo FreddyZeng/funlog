@@ -1,5 +1,5 @@
 {
-  "name": "funlog",
+  "name": "@freddyzeng/funlog",
   "description": "A tool for insert log to function of js and ts and vue，insert log to content of css and less and sass",
   "version": "0.0.1",
   "author": "freddyzeng @FreddyZeng",
