@@ -1,32 +1,3 @@
 .test .a {
-	padding: 40px;
-	.bad {
-		bottom: 4px;
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 5';
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 6';
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 7';
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 8';
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 9';
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 10';
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 11';
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 12';
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 13';
-        content:'file: /home/fanrong/funlog/test/file/test.css, line: 14';
-      content:'file: /home/fanrong/funlog/test/file/test.css, line: 15';
-      content:'file: /home/fanrong/funlog/test/file/test.css, line: 16';
-      content:'file: /home/fanrong/funlog/test/file/test.css, line: 17';
-	}
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 6';
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 8';
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 10';
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 12';
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 14';
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 16';
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 18';
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 20';
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 22';
-    content:'file: /home/fanrong/funlog/test/file/test.css, line: 24';
-     content:'file: /home/fanrong/funlog/test/file/test.css, line: 26';
-     content:'file: /home/fanrong/funlog/test/file/test.css, line: 28';
-     content:'file: /home/fanrong/funlog/test/file/test.css, line: 30';
+  padding: 40px;
 }

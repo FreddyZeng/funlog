@@ -19,7 +19,7 @@ class FunlogCommand extends Command {
   handleCSSForFile(file) {
     const ext = path.extname(file).toLowerCase();
     console.log(file);
-    let space_alignment_count = 4;
+    let space_alignment_count = 3;
     if (ext == '.css' ||
       ext == '.less' ||
       ext == '.sass' ||
@@ -34,12 +34,11 @@ class FunlogCommand extends Command {
         for (const i in read_file_line_array) {
           const line = read_file_line_array[i];
           const line_number = parseInt(i) + 1;
-          if (/ *\} */.test(line)) {
+          
+          if (/^\s*\}\s*$/.test(line)) {
             const space = ' ';
             // console.log(line.length);
-            if (ext != '.css') {
-              space_alignment_count = 1;
-            }
+            space_alignment_count = 1;
             read_file_line_array[i] = `${space.repeat(line.length-1 + space_alignment_count)}content:'file: ${file}, line: ${line_number}';\n${line}`
             // console.log(read_file_line_array[i]);
           }
@@ -78,9 +77,9 @@ class FunlogCommand extends Command {
             continue;
           }
           const line_number = parseInt(i) + 1;
-          if (/ *\} */.test(line)) {
+          if (/^\s*\}\s*$/.test(line)) {
             const space = ' ';
-            read_file_line_array[i] = `${space.repeat(line.length-2 + space_alignment_count)}content:'file: ${file}, line: ${line_number}';\n${line}`
+            read_file_line_array[i] = `${space.repeat(line.length-1 + space_alignment_count)}content:'file: ${file}, line: ${line_number}';\n${line}`
             // console.log(read_file_line_array[i]);
           }
         }

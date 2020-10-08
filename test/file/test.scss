@@ -4,11 +4,15 @@ nav {
     padding: 0;
     list-style: none;
     content:'file: /home/fanrong/funlog/test/file/test.scss, line: 6';
+    content:'file: /home/fanrong/funlog/test/file/test.scss, line: 7';
+    content:'file: /home/fanrong/funlog/test/file/test.scss, line: 8';
   }
 
   li {
     display: inline-block;
     content:'file: /home/fanrong/funlog/test/file/test.scss, line: 10';
+    content:'file: /home/fanrong/funlog/test/file/test.scss, line: 12';
+    content:'file: /home/fanrong/funlog/test/file/test.scss, line: 14';
   }
 
   a {
@@ -16,6 +20,10 @@ nav {
     padding: 6px 12px;
     text-decoration: none;
     content:'file: /home/fanrong/funlog/test/file/test.scss, line: 16';
+    content:'file: /home/fanrong/funlog/test/file/test.scss, line: 19';
+    content:'file: /home/fanrong/funlog/test/file/test.scss, line: 22';
   }
   content:'file: /home/fanrong/funlog/test/file/test.scss, line: 17';
+  content:'file: /home/fanrong/funlog/test/file/test.scss, line: 21';
+  content:'file: /home/fanrong/funlog/test/file/test.scss, line: 25';
 }
