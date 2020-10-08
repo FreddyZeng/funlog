@@ -3,11 +3,6 @@ funlog
 
 A tool for insert log to function of js and ts and vue，insert log to content of css and less and sass
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/funlog.svg)](https://npmjs.org/package/funlog)
-[![Downloads/week](https://img.shields.io/npm/dw/funlog.svg)](https://npmjs.org/package/funlog)
-[![License](https://img.shields.io/npm/l/funlog.svg)](https://github.com/freddyzeng/funlog/blob/master/package.json)
-
 <!-- toc -->
 * [Usage](#usage)
 <!-- tocstop -->
