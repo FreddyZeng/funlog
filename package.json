@@ -1,7 +1,7 @@
 {
   "name": "@freddyzeng/funlog",
   "description": "A tool for insert log to function of js and ts and vue，insert log to content of css and less and sass",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "author": "freddyzeng @FreddyZeng",
   "bin": {
     "funlog": "./bin/run"
@@ -14,6 +14,7 @@
     "@oclif/plugin-help": "^3.2.0",
     "glob": "^7.1.6",
     "jscodeshift": "^0.11.0",
+    "pure-uuid": "^1.6.1",
     "vue-template-compiler": "^2.6.12"
   },
   "devDependencies": {
