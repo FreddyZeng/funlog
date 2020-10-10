@@ -1,13 +1,14 @@
 {
   "name": "@freddyzeng/funlog",
   "description": "A tool for insert log to function of js and ts and vue，insert log to content of css and less and sass",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "freddyzeng @FreddyZeng",
   "bin": {
     "funlog": "./bin/run"
   },
   "bugs": "https://github.com/freddyzeng/funlog/issues",
   "dependencies": {
+    "@babel/preset-env": "^7.11.5",
     "@oclif/color": "^0.1.2",
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
