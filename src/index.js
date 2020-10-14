@@ -39,7 +39,7 @@ class FunlogCommand extends Command {
             const space = '\t';
             // console.log(line.length);
             const next_line_space = line.replace('}', '');
-            read_file_line_array[i] = `${next_line_space}${space.repeat(space_alignment_count)};content:'file: ${file}, line: ${line_number}';\n${line}`
+            read_file_line_array[i] = `${next_line_space}${space.repeat(space_alignment_count)};--locate:'file: ${file}, line: ${line_number}';\n${line}`
             // console.log(read_file_line_array[i]);
           }
         }
@@ -80,7 +80,7 @@ class FunlogCommand extends Command {
           if (/^\s*\}\s*$/.test(line)) {
             const space = '\t';
             const next_line_space = line.replace('}', '');
-            read_file_line_array[i] = `${next_line_space}${space.repeat(space_alignment_count)};content:'file: ${file}, line: ${line_number}';\n${line}`
+            read_file_line_array[i] = `${next_line_space}${space.repeat(space_alignment_count)};--locate:'file: ${file}, line: ${line_number}';\n${line}`
             // console.log(read_file_line_array[i]);
           }
         }
