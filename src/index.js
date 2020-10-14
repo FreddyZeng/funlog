@@ -114,6 +114,9 @@ class FunlogCommand extends Command {
         const collection_javascript_code_array = []
         const above_javascript_code_array = []
         const below_javascript_code_array = []
+
+        // TODO: optimization for get above_javascript_code_array and below_javascript_code_array by index
+
         // console.log(read_file_line_array);
         let currentInJavascriptArea = false;
         let didEnterJavascriptArea = false;
